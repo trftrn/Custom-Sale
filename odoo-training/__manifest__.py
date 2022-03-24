@@ -4,13 +4,11 @@
     'version': '14.0.0.0.1',
     'summary': 'Odoo Training',
     'depends': [
-        'base',
-        'mail',
-        'web'
+        'sale'
     ],
     'data': [
-        'security/group.xml',
-        'views/inherit_sales_order.xml',
+        'security/ir.model.access.csv',
+        'views/customer_vvip.xml',
     ],
     'installable': True,
     'application': True,
