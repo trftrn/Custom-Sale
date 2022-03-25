@@ -32,4 +32,9 @@ class CustomerVvip(models.Model):
         string='Interest Data',
         required=False
     )
+    customer_id = fields.Many2one(
+        comodel_name='res.partner',
+        string='Customer VVIP',
+        required=False,
+    )
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="sales_order_customer_form_view" model="ir.ui.view">
+            <field name="name">sales.order.customer.form.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <group>
+                    <group>
+                    <field name="is_vvip_customer" position="after">
+                        <field name="category_id"/>
+                    </field>
+                    </group>
+                </group>
+                <xpath expr="//page[5]" position="after">
+                    <page string="Customer" attrs="{'invisible': [('is_vvip_customer','=',False)]}">
+                        <field name="customer_vvip_ids" >
+                            <tree string="Customer vvip">
+                                <field name="customer_id" string="Customer"/>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                                <field name="food_favorite"/>
+                                <field name="drink_favorite"/>
+                            </tree>
+                        </field>
+                    </page>
+
+                </xpath>
+            </field>
+        </record>
+        <record id="sales_order_customer_action" model="ir.actions.act_window">
+            <field name="name">Customer Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">form</field>
+        </record>
+    </data>
+</odoo>

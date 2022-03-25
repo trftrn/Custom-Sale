@@ -9,6 +9,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/customer_vvip.xml',
+        'views/inherit_sales_customer_view.xml',
     ],
     'installable': True,
     'application': True,
