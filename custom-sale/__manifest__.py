@@ -7,8 +7,11 @@
     'author': 'vini',
     'depends': ['sale'],
     'data': [
+        'security/ir.model.access.csv',
         'security/group.xml',
         'view/custom-saleorder-view.xml',
+        'view/customer_vvip.xml',
+        'view/inherit_customer_customer_vvip.xml'
     ],
     # 'demo': [''],
     'installable': True,
